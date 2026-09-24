@@ -1,9 +1,5 @@
 <div align="center">
 
-<h3>
-Hi
-</h3>
-
 <img src="output/bonsai.gif" width="384" alt="my git-bonsai" />
 
 <table>
