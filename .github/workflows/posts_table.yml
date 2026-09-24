@@ -25,5 +25,5 @@ jobs:
           feed_list: "https://hos.sh/feed.xml"
           max_post_count: 5
           date_format: "mmm dd,yyyy"
-          template: "| [$title]($url) | $date |$newline"
-          tag_post_pre_newline: true
+          template: "<tr><td><a href=\"$url\">$title</a></td><td>$date</td></tr>"
+
