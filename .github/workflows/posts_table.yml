@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Pull in latest posts from hos.sh
-        uses: gautamkrishnar/blog-post-workflow@v2
+        uses: gautamkrishnar/blog-post-workflow@v1
         with:
           feed_list: "https://hos.sh/feed.xml"
           max_post_count: 5
