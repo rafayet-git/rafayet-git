@@ -1,0 +1,28 @@
+name: Latest posts from hos.sh
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+  workflow_dispatch:
+
+  push:
+    branches:
+    - master
+
+jobs:
+  update-posts-table:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Pull in latest posts from hos.sh
+        uses: gautamkrishnar/blog-post-workflow@v2
+        with:
+          feed_list: "https://hos.sh/feed.xml"
+          max_post_count: 5
+          date_format: "mmm dd,yyyy"
+          template: "| [$title]($url) | $date |"
